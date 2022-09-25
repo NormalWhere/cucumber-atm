@@ -69,5 +69,8 @@ public class StepDefATM {
         assertEquals(balance,
                      bank.getCustomer(id).getAccount().getBalance());
     }
-
+    @When("I deposit {float}")
+    public void i_deposit(double amount){
+        atm.deposit(amount);
+    }
 }
